@@ -1,0 +1,16 @@
+/* Applies the font to the root of the tree and all children elements */
+:root { font: 20px/24px "Roboto", sans-serif; } /* or html */
+
+/* Resetting CSS for blank template */
+body,
+body * {
+    margin: unset;
+    box-sizing: unset;
+    padding: unset;
+    font-size: unset;
+    color: unset;
+    text-decoration: unset;
+}
+
+/* figure's child */
+figure * { display: block; }

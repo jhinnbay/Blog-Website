@@ -1,0 +1,23 @@
+/* grid template columns uses fractions */
+/* mix max */
+
+article {
+    padding: 0.5in 0;
+
+    display: grid;
+    grid-template-columns: 1fr 0.5in [start] 1.25in 5in 1.25in [end] 0.5in 1fr;
+                        /* 1   2     3               4      5   6 */
+
+    background: linear-gradient(hsl(55, 100%, 95%), white 6.5rem);
+}
+
+/* tells articles children to fall between 2nd and 3rd column */
+/* 3 over 4 represents the content column */
+article * { grid-column: start / end; }
+
+
+/* multiple minmax() don't work so using a media query */
+@media (max-width: 8.5in) {
+    article { grid-template-columns: 1fr 5% [start] 15% 60% 15% [end] 5% 1fr;
+}
+}
